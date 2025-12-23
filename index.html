@@ -1,119 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Capsulon Hair & Nails</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle at top, #5b1b6d, #2b0a36);
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top, #5a1b5f, #2b082f);
     color:#fff;
 }
-
 .container{
     max-width:1100px;
     margin:auto;
     padding:40px 20px;
 }
-
-h1,h2,h3{
-    color:#d4af37;
-    text-align:center;
-}
-
-p{
-    font-size:18px;
-    line-height:1.7;
-}
-
-.section{
-    margin:60px 0;
-}
-
-.hero img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 0 40px rgba(212,175,55,.4);
-}
-
-.cta{
-    text-align:center;
-    margin:40px 0;
-}
-
-.cta a{
-    background:linear-gradient(45deg,#d4af37,#f5e28a);
-    color:#2b0a36;
-    padding:18px 40px;
-    font-size:22px;
-    font-weight:bold;
-    border-radius:50px;
-    text-decoration:none;
-    display:inline-block;
-    box-shadow:0 0 25px rgba(212,175,55,.6);
-}
-
-.cta a:hover{
-    transform:scale(1.05);
-}
-
-.grid{
+.hero{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
     align-items:center;
 }
-
-.grid img{
+.hero img{
     width:100%;
-    border-radius:15px;
+    border-radius:12px;
+    box-shadow:0 0 40px rgba(255,215,120,.4);
 }
-
-.benefits ul{
-    list-style:none;
-    padding:0;
+h1,h2{
+    color:#d4af37;
 }
-
+.price{
+    font-size:38px;
+    font-weight:bold;
+}
+.old{
+    text-decoration:line-through;
+    color:#ffbdbd;
+}
+.btn{
+    display:inline-block;
+    background:linear-gradient(45deg,#d4af37,#ffeb9c);
+    color:#3a1b00;
+    padding:18px 32px;
+    border-radius:40px;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    margin-top:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+.section{
+    margin-top:70px;
+}
 .benefits li{
-    margin-bottom:15px;
-    font-size:18px;
+    margin-bottom:10px;
 }
-
-.table{
-    background:rgba(255,255,255,.06);
-    padding:30px;
-    border-radius:15px;
-}
-
 .stars{
-    text-align:center;
-    font-size:30px;
     color:#ffd700;
+    font-size:22px;
 }
-
-.testimonial{
-    background:rgba(255,255,255,.07);
-    padding:25px;
-    border-radius:15px;
+.depo{
+    background:rgba(255,255,255,.06);
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px;
 }
-
-.guarantee{
-    text-align:center;
+.seal{
+    width:160px;
+    margin-top:20px;
 }
-
-.guarantee img{
-    width:180px;
-    margin-bottom:20px;
-}
-
-.footer{
-    text-align:center;
+footer{
     font-size:14px;
     opacity:.8;
-    margin-top:40px;
+    margin-top:80px;
+}
+@media(max-width:900px){
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 }
 </style>
 </head>
@@ -123,124 +90,59 @@ p{
 <div class="container">
 
 <!-- HERO -->
-<section class="hero section">
-    <img src="Imagem da cápsula nova.png" alt="Capsulon Hair & Nails">
-</section>
+<div class="hero">
+    <img src="data:image/png;base64,INSIRA_AQUI_O_BASE64_DA_IMAGEM" alt="Capsulon Hair & Nails">
 
-<div class="cta">
-    <a href="https://go.hotmart.com/C103441817P" target="_blank">
-        COMPRAR AGORA COM DESCONTO
-    </a>
+    <div>
+        <h1>Beleza visível de dentro para fora</h1>
+        <p>Fortaleça cabelos, unhas e pele com uma fórmula exclusiva e poderosa.</p>
+
+        <p class="old">De R$ 199,90</p>
+        <p class="price">Por R$ 129,90</p>
+        <p>Em até 10x sem juros</p>
+
+        <a class="btn" href="https://go.hotmart.com/C103441817P" target="_blank">
+            COMPRAR AGORA COM DESCONTO
+        </a>
+
+        <br>
+
+        <img class="seal" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI5NSIgZmlsbD0iI2Q0YWYzNyIvPjx0ZXh0IHg9IjEwMCIgeT0iODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiMzYTFiMDAiIGZvbnQtd2VpZ2h0PSJib2xkIj43IERJQVM8L3RleHQ+PHRleHQgeD0iMTAwIiB5PSIxMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMzYTFiMDAiIGZvbnQtd2VpZ2h0PSJib2xkIj5HQVJBTlRJQTwvdGV4dD48L3N2Zz4=" alt="Garantia 7 dias">
+    </div>
 </div>
-
-<!-- COPY PRINCIPAL -->
-<section class="section">
-<h1>Recupere a força dos seus cabelos, a beleza da sua pele e a resistência das suas unhas</h1>
-
-<p>
-Você já se olhou no espelho e sentiu que seu cabelo perdeu o brilho, suas unhas quebram com facilidade
-ou sua pele parece opaca e sem vida?
-</p>
-
-<p>
-Isso acontece quando o corpo não recebe os nutrientes certos.
-O <strong>Capsulon Hair & Nails</strong> foi desenvolvido para cuidar da sua beleza
-<strong>de dentro para fora</strong>, com uma fórmula segura, eficaz e completa.
-</p>
-</section>
-
-<!-- IMAGENS -->
-<section class="section grid">
-    <img src="mulher-cabelos.jpg" alt="Mulher com cabelos saudáveis">
-    <img src="unhas-naturais.jpg" alt="Unhas naturais saudáveis">
-</section>
 
 <!-- BENEFÍCIOS -->
-<section class="section benefits">
+<div class="section">
 <h2>Benefícios do Capsulon</h2>
-<ul>
-<li>✔ Estimula o crescimento saudável dos cabelos</li>
-<li>✔ Reduz queda, quebra e fios enfraquecidos</li>
-<li>✔ Devolve brilho, maciez e vitalidade</li>
-<li>✔ Fortalece unhas fracas e quebradiças</li>
-<li>✔ Melhora a hidratação e aparência da pele</li>
+<ul class="benefits">
+<li><strong>Cabelos:</strong> mais fortes, com brilho e menos queda</li>
+<li><strong>Pele:</strong> hidratada, uniforme e radiante</li>
+<li><strong>Unhas:</strong> mais resistentes e saudáveis</li>
 </ul>
-</section>
-
-<!-- PRODUTO SOLO -->
-<section class="section grid">
-    <img src="produto-solo.png" alt="Capsulon frasco">
-    <div>
-        <h2>Fórmula Exclusiva e Segura</h2>
-        <p>
-        Complexo nutricional com vitaminas, minerais e antioxidantes.
-        Sem aditivos artificiais. Resultados visíveis em poucas semanas.
-        </p>
-    </div>
-</section>
-
-<!-- TABELA -->
-<section class="section table">
-<h2>Tabela Nutricional</h2>
-<p>Cisteína – 100mg</p>
-<p>Biotina – 30mcg</p>
-<p>Vitamina B5 – 5mg</p>
-<p>Vitamina B6 – 1,3mg</p>
-<p>Ferro – 14mg</p>
-<p>Zinco – 7mg</p>
-<p>Selênio – 34mcg</p>
-<p>Prolina – 100mg</p>
-<p>MSM – 100mg</p>
-<p>Vitamina K2 – 50mg</p>
-<p><strong>Não contém glúten</strong></p>
-</section>
+</div>
 
 <!-- AVALIAÇÕES -->
-<section class="section">
-<div class="stars">★★★★★</div>
+<div class="section">
+<h2>Avaliações dos Clientes</h2>
+<div class="stars">★★★★★ 5.0 de 5</div>
 
-<div class="grid">
-<div class="testimonial">
-<p>"Meu cabelo parou de cair e ficou muito mais forte."</p>
-<strong>Mariana S.</strong>
+<div class="depo">“Meu cabelo parou de cair e ficou muito mais bonito.” – Juliana S.</div>
+<div class="depo">“Minhas unhas nunca estiveram tão fortes.” – Renata M.</div>
+<div class="depo">“A pele melhora visivelmente em poucas semanas.” – Camila R.</div>
 </div>
 
-<div class="testimonial">
-<p>"Minhas unhas nunca estiveram tão bonitas."</p>
-<strong>Juliana R.</strong>
+<!-- BOTÃO FINAL -->
+<div class="section" style="text-align:center;">
+<a class="btn" href="https://go.hotmart.com/C103441817P" target="_blank">
+    GARANTIR MEU CAPSULON AGORA
+</a>
 </div>
 
-<div class="testimonial">
-<p>"Minha pele ficou visivelmente mais hidratada."</p>
-<strong>Carla M.</strong>
-</div>
-</div>
-</section>
-
-<!-- GARANTIA -->
-<section class="section guarantee">
-<img src="selo-garantia.svg" alt="Garantia 7 dias">
-<h2>Garantia Incondicional de 7 Dias</h2>
-<p>
-Se você não ficar satisfeita, solicite o reembolso total diretamente pela Hotmart.
-Simples, rápido e sem burocracia.
-</p>
-</section>
-
-<div class="cta">
-    <a href="https://go.hotmart.com/C103441817P" target="_blank">
-        QUERO TRANSFORMAR MINHA BELEZA AGORA
-    </a>
-</div>
-
-<!-- RODAPÉ -->
-<div class="footer">
-<p>
-Este produto não é um medicamento.  
-Farmacêutico Responsável: Dr. Taner Novaes Andrade – CRF/SP 77418  
-</p>
-</div>
+<footer>
+<p>Este produto não é medicamento. Farmacêutico responsável: Dr. Taner Novaes Andrade – CRF/SP 77418</p>
+</footer>
 
 </div>
+
 </body>
 </html>
